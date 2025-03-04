@@ -39,7 +39,13 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  SizedBox(width: 130, height: 40, child: ElevatedButton(onPressed: () {}, child: Text('Удалить'))),
+                  SizedBox(
+                      width: 130,
+                      height: 40,
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                          child: Text('Удалить'))),
                   Spacer(),
                   SizedBox(width: 130, height: 40, child: ElevatedButton(onPressed: () {}, child: Text('Добавить')))
                 ],
