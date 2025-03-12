@@ -132,14 +132,13 @@ packages:
     source: hosted
     version: "1.16.0"
   path:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: path
       sha256: "75cca69d1490965be98c73ceaea117e8a04dd21217b37b292c9ddbec0d955bc5"
       url: "https://pub.dev"
     source: hosted
-<<<<<<< HEAD
-    version: "1.9.0"
+    version: "1.9.1"
   platform:
     dependency: transitive
     description:
@@ -156,9 +155,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
-=======
-    version: "1.9.1"
->>>>>>> c5dbfb21c3bb915fb5c8e8b53cb2792c7f71b063
   sky_engine:
     dependency: transitive
     description: flutter
@@ -171,8 +167,7 @@ packages:
       sha256: "254ee5351d6cb365c859e20ee823c3bb479bf4a293c22d17a9f1bf144ce86f7c"
       url: "https://pub.dev"
     source: hosted
-<<<<<<< HEAD
-    version: "1.10.0"
+    version: "1.10.1"
   sqflite:
     dependency: "direct main"
     description:
@@ -213,9 +208,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.0"
-=======
-    version: "1.10.1"
->>>>>>> c5dbfb21c3bb915fb5c8e8b53cb2792c7f71b063
   stack_trace:
     dependency: transitive
     description:
@@ -239,8 +231,7 @@ packages:
       sha256: "921cd31725b72fe181906c6a94d987c78e3b98c2e205b397ea399d4054872b43"
       url: "https://pub.dev"
     source: hosted
-<<<<<<< HEAD
-    version: "1.3.0"
+    version: "1.4.1"
   synchronized:
     dependency: transitive
     description:
@@ -249,9 +240,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.0+3"
-=======
-    version: "1.4.1"
->>>>>>> c5dbfb21c3bb915fb5c8e8b53cb2792c7f71b063
   term_glyph:
     dependency: transitive
     description:
@@ -285,10 +273,5 @@ packages:
     source: hosted
     version: "14.3.1"
 sdks:
-<<<<<<< HEAD
-  dart: ">=3.6.2 <4.0.0"
-  flutter: ">=3.24.0"
-=======
   dart: ">=3.7.0-0 <4.0.0"
-  flutter: ">=3.18.0-18.0.pre.54"
->>>>>>> c5dbfb21c3bb915fb5c8e8b53cb2792c7f71b063
+  flutter: ">=3.24.0"
