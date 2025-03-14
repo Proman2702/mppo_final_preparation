@@ -8,7 +8,8 @@ import 'package:mppo_final/repos/net/get_info.dart';
 import 'package:sqflite/sqflite.dart';
 
 class AddDialog extends StatefulWidget {
-  const AddDialog({super.key});
+  final Function updater;
+  const AddDialog({super.key, required this.updater});
 
   @override
   State<AddDialog> createState() => _AddDialogState();
@@ -170,18 +171,18 @@ class _AddDialogState extends State<AddDialog> {
             alignment: Alignment.center,
             child: ElevatedButton(
                 onPressed: () async {
-                  int? a;
                   if (checkAllFields()) {
                     temp = await NetService().getWeather(lan: lan!, lon: lon!, date: dateController.text);
 
                     if (temp != null) {
-                      a = await DatabaseService().insertItem(Item(
+                      await DatabaseService().insertItem(Item(
                           lan: double.parse(lan!),
                           lon: double.parse(lon!),
                           date: dateController.text,
                           temperature: temp!));
-                      log(a.toString());
                     }
+                    widget.updater();
+                    Navigator.pop(context);
                   }
                 },
                 child: Text('Сохранить')),

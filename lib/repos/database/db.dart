@@ -36,7 +36,7 @@ class DatabaseService {
 
     return await openDatabase(
       path,
-      version: 4,
+      version: 3,
       onUpgrade: (db, version, oldVersion) async {
         await db.execute('''
           CREATE TABLE items(
@@ -59,6 +59,12 @@ class DatabaseService {
   Future<List<Map<String, dynamic>>> getItems() async {
     final db = await database;
     return await db.query('items');
+  }
+
+  Future<int> delItem(Item item) async {
+    final db = await database;
+    return await db.delete('items',
+        where: item.toMap().keys.map((key) => '$key = ?').join(' AND '), whereArgs: item.toMap().values.toList());
   }
 
   Future<void> copyDbToDownloads() async {

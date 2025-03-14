@@ -14,4 +14,10 @@ class Item {
   factory Item.fromMap(Map<String, dynamic> map) {
     return Item(id: map['id'], lan: map['lan'], lon: map['lon'], date: map['date'], temperature: map['temperature']);
   }
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return "$id, $date, $lan, $lon, $temperature";
+  }
 }
